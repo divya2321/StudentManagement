@@ -49,7 +49,7 @@ public class StudentController {
 
     @GetMapping("/searchbyid")
     public ResponseEntity<StudentResponse> searchStudentByIdQuery(@RequestParam("idstudent") Long idStudent){
-        log.info("STUDENTID: "+String.valueOf(idStudent));
+        log.info("Student ID: "+String.valueOf(idStudent));
         StudentResponse studentResponse = studentServiceIml.searchStudentById(idStudent);
         if (studentResponse!=null){
             return ResponseEntity.ok(studentResponse);
@@ -57,5 +57,4 @@ public class StudentController {
         return ResponseEntity.notFound().build();
     }
 
-//    http://localhost:9999/student/save
 }
