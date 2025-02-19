@@ -57,6 +57,8 @@ public class StudentController {
         return ResponseEntity.notFound().build();
     }
 
-    public void newUpdate(){}
+    public void newUpdate(){
+        //
+    }
 
 }
